@@ -18,12 +18,14 @@ body {
 
 .side {
   position: fixed;
-  width: 15%;
+  width: 200px;
   height: 100%;
+  transition: 0.5s;
 }
 
-.active > aside {
-  width: 5%;
+.active {
+  width: 100px;
+  transition: 0.5s;
 }
 
 .side > .btn {
@@ -40,32 +42,45 @@ body {
   cursor: pointer;
 }
 
+.menu,
+.menu ul {
+  height: 100%;
+}
+
 .side .menu ul li {
   padding: 5px 0 5px 5px;
 }
 
-.page {
-  width: 100%;
-  padding-left: 15%;
+.side .menu ul li:last-child {
+  margin-top: 680px;
+  position: fixed;
 }
 
-.active > .page {
-  padding-left: 5%;
+.page {
+  width: 100%;
+  padding-left: 200px;
+  transition: 0.5s;
+}
+
+aside.active + div {
+  padding-left: 100px;
+  transition: 0.5s;
+}
+aside.active + div header {
+  left: 100px;
+  transition: 0.5s;
 }
 
 header {
   position: fixed;
   right: 0;
-  left: 15%;
+  left: 200px;
   top: 0;
   display: flex;
   justify-content: space-between;
   height: 30px;
   padding: 5px 10px 0 10px;
-}
-
-.active > .page > header {
-  left: 5%;
+  transition: 0.5s;
 }
 
 header > div {
@@ -178,10 +193,14 @@ section > div:nth-child(2) {
 section > div:nth-child(2) > div:nth-child(1) {
   height: 30%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  overflow: auto;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 400px;
 }
 
 section > div:nth-child(2) > div:nth-child(2) {
+  width: 400px;
   height: 50%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }

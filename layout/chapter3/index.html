@@ -12,7 +12,7 @@
     />
   </head>
   <body>
-    <div class="container" id="side-close">
+    <div class="container">
       <aside class="side primary">
         <div class="btn">
           <button onclick="sideClose()">
@@ -23,6 +23,7 @@
           <ul>
             <li>사이드 메뉴 1</li>
             <li>사이드 메뉴 2</li>
+            <li>사이드 메뉴 3</li>
           </ul>
         </div>
       </aside>
@@ -95,7 +96,7 @@
     <script>
       let status = false;
       const icon = document.getElementById('icon');
-      const side = document.getElementById('side-close');
+      const side = document.querySelector('aside');
       const upScroll = document.getElementById('scroll-up');
 
       function sideClose() {
