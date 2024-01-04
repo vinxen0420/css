@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter2-flex</title>
+  </head>
+  <style>
+    @import '../../reset.css';
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      flex-wrap: wrap;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+    .red {
+      background-color: red;
+    }
+    .gray {
+      background-color: gray;
+    }
+    .yellow {
+      background-color: yellow;
+    }
+
+    .f-4 {
+      flex-grow: 4;
+    }
+
+    .f-3 {
+      flex-grow: 3;
+    }
+
+    .f-2 {
+      flex-grow: 2;
+    }
+
+    .f-1 {
+      flex-grow: 1;
+    }
+  </style>
+  <body>
+    <div class="container row">
+      <div class="column f-4">
+        <div class="row f-2">
+          <div class="column f-2">
+            <div class="f-2 blue"></div>
+            <div class="f-1 red"></div>
+          </div>
+          <div class="column f-2">
+            <div class="f-2 red"></div>
+            <div class="row f-1">
+              <div class="f-1 gray"></div>
+              <div class="f-1 blue"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row f-1">
+          <div class="f-1 blue"></div>
+          <div class="f-3 yellow"></div>
+        </div>
+      </div>
+      <div class="column f-1">
+        <div class="f-2 gray"></div>
+        <div class="f-1 blue"></div>
+      </div>
+    </div>
+  </body>
+</html>

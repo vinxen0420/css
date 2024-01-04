@@ -1,0 +1,87 @@
+@import '../../reset.css';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+table,
+tbody,
+tr,
+td {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-sizing: border-box;
+  -o-sizing: border-box;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+}
+
+tr {
+  height: 25%;
+}
+
+tr:not(:first-child) {
+  border-top: 10px solid black;
+}
+
+td {
+  width: 25%;
+  border-right: 10px solid black;
+}
+
+.w-20 {
+  width: 20%;
+}
+.w-25 {
+  width: 25%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.h-25 {
+  height: 25%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.skyblue {
+  background-color: skyblue;
+}
+
+.ivory {
+  background-color: ivory;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.border-top {
+  border-top: 10px solid black;
+}
+
+.border-right {
+  border-right: 10px solid black;
+}

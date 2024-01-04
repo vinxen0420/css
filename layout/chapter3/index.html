@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter3</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container" id="side-close">
+      <aside class="side primary">
+        <div class="btn">
+          <button onclick="sideClose()">
+            <i style="font-size: 30px" class="fa fa-angle-left" id="icon"></i>
+          </button>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>사이드 메뉴 1</li>
+            <li>사이드 메뉴 2</li>
+          </ul>
+        </div>
+      </aside>
+      <div class="page">
+        <header class="primary">
+          <div>Logo</div>
+          <div>안녕하세요 김민지님</div>
+        </header>
+        <div class="content">
+          <h1>레이아웃 연습하기</h1>
+          <div>
+            <nav class="primary">
+              <div class="dropdown">
+                <button class="dropbtn">
+                  메뉴1
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">하위 메뉴1</a>
+                  <a href="#">하위 메뉴2</a>
+                  <a href="#">하위 메뉴3</a>
+                </div>
+              </div>
+              <a href="">메뉴2</a>
+            </nav>
+            <section>
+              <div></div>
+              <div>
+                <div>
+                  여기는 DIV 스타일에 overflow: auto; 속성을 주었다. 내용의 양이
+                  DIV 영역보다 많으면 스클롤바가 표시되고 적으면 표시되지
+                  않는다. ====> 이 글은 예를 보이기 위한 것이므로 읽을 필요가
+                  없다. 여기는 DIV 스타일에 overflow: auto; 속성을 주었다.
+                  내용의 양이 DIV 영역보다 많으면 스클롤바가 표시되고 적으면
+                  표시되지 않는다.여기는 DIV 스타일에 overflow: auto; 속성을
+                  주었다. 내용의 양이 DIV 영역보다 많으면 스클롤바가 표시되고
+                  적으면 표시되지 않는다.여기는 DIV 스타일에 overflow: auto;
+                  속성을 주었다. 내용의 양이 DIV 영역보다 많으면 스클롤바가
+                  표시되고 적으면 표시되지 않는다.여기는 DIV 스타일에 overflow:
+                  auto; 속성을 주었다. 내용의 양이 DIV 영역보다 많으면
+                  스클롤바가 표시되고 적으면 표시되지 않는다.여기는 DIV 스타일에
+                  overflow: auto; 속성을 주었다. 내용의 양이 DIV 영역보다 많으면
+                  스클롤바가 표시되고 적으면 표시되지 않는다. 여기는 DIV
+                  스타일에 overflow: auto; 속성을 주었다. 내용의 양이 DIV
+                  영역보다 많으면 스클롤바가 표시되고 적으면 표시되지 않는다.
+                  ====> 이 글은 예를 보이기 위한 것이므로 읽을 필요가 없다.
+                  여기는 DIV 스타일에 overflow: auto; 속성을 주었다. 내용의 양이
+                  DIV 영역보다 많으면 스클롤바가 표시되고 적으면 표시되지
+                  않는다.여기는 DIV 스타일에 overflow: auto; 속성을 주었다.
+                  내용의 양이 DIV 영역보다 많으면 스클롤바가 표시되고 적으면
+                  표시되지 않는다.여기는 DIV 스타일에 overflow: auto; 속성을
+                  주었다. 내용의 양이 DIV 영역보다 많으면 스클롤바가 표시되고
+                  적으면 표시되지 않는다.여기는 DIV 스타일에 overflow: auto;
+                  속성을 주었다. 내용의 양이 DIV 영역보다 많으면 스클롤바가
+                  표시되고 적으면 표시되지 않는다.여기는 DIV 스타일에 overflow:
+                  auto; 속성을 주었다. 내용의 양이 DIV 영역보다 많으면
+                  스클롤바가 표시되고 적으면 표시되지 않는다.
+                </div>
+                <div></div>
+              </div>
+            </section>
+          </div>
+          <button id="scroll-up">
+            <i style="font-size: 24px" class="fa">&#xf106;</i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let status = false;
+      const icon = document.getElementById('icon');
+      const side = document.getElementById('side-close');
+      const upScroll = document.getElementById('scroll-up');
+
+      function sideClose() {
+        status = !status;
+
+        if (status) {
+          icon.classList.add('fa-angle-right');
+          icon.classList.remove('fa-angle-left');
+          side.classList.add('active');
+        } else {
+          icon.classList.add('fa-angle-left');
+          icon.classList.remove('fa-angle-right');
+          side.classList.remove('active');
+        }
+      }
+
+      upScroll.addEventListener('click', (e) => {
+        window.scrollTo({ top: 0 });
+      });
+    </script>
+  </body>
+</html>

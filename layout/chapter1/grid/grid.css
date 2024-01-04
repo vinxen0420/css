@@ -1,0 +1,85 @@
+@import '../../reset.css';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-sizing: border-box;
+  -o-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.contanier {
+  border-top: 20px solid beige;
+  border-right: 10px solid beige;
+  border-left: 20px solid beige;
+  border-bottom: 10px solid beige;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* row */
+.grs-1 {
+  grid-row-start: 1;
+}
+.grs-2 {
+  grid-row-start: 2;
+}
+.grs-3 {
+  grid-row-start: 3;
+}
+.gre-2 {
+  grid-row-end: 2;
+}
+.gre-3 {
+  grid-row-end: 3;
+}
+.gre-4 {
+  grid-row-end: 4;
+}
+
+/* column */
+.gcs-1 {
+  grid-column-start: 1;
+}
+.gcs-2 {
+  grid-column-start: 2;
+}
+.gce-3 {
+  grid-column-end: 3;
+}
+.gce-4 {
+  grid-column-end: 4;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.skyblue {
+  background-color: skyblue;
+}
+
+.ivory {
+  background-color: ivory;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
